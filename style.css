@@ -1,17 +1,5 @@
 [for="100"], [for="200"]{
-    background-color: rgb(241, 132, 205);
-}
-
-.son > label{
-    background-color: rgb(182, 115, 245);
-}
-
-.grandSons > label{
-    background-color: plum;
-}
-
-.grandGrandSons > label{
-    background-color: rosybrown;
+    font-weight: bold;
 }
 
 label{
