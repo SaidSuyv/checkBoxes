@@ -1,41 +1,16 @@
-[for="100"], [for="200"]{
+label[for$="00"]{
     font-weight: bold;
 }
 
-.check{
-    width: 40px;
-    height: 24px;
-    background-color: #666;
-    border-radius: 100px;
-    position: relative;
-    float: right;
+input{
+  display: block;
+  margin: 1em 0;
 }
 
-.check::after{
-    content: '';
-    display: block;
-    width: 17px;
-    height: 17px;
-    position: absolute;
-    top: 3.4px;
-    left: 2px;
-    background-color: #eee;
-    border-radius: 100px;
-    transition: .2s;
+.son{
+  margin-left: 3em;
 }
 
-.checkbox:checked + .check::after{
-    left: 20px;
-}
-
-.checkbox:checked + .check{
-    background-color: rgb(72, 72, 185);
-}
-
-.checkbox:disabled + .check{
-    background-color: #6666;
-}
-
-.checkbox{
-    display: none;
+.grandSon{
+  margin-left: 6em;
 }

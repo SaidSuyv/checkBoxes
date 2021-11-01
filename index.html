@@ -11,110 +11,41 @@
 </head>
 
 <body>
-    <div class="main-container">
-      <div class="father father-1">
-        <div class="text">
-          <p><b>Checkbox 100</b></p>
-        </div>
-        <div class="switch">
-          <input type="checkbox" name="father" id="100" class="checkbox">
-          <label for="100" class="check"></label>
-        </div>
-        <div class="son son-1">
-          <div class="text">
-            <p>Checkbox 101</p>
-          </div>
-          <div class="switch">
-            <input type="checkbox" name="son" id="101" class="checkbox">
-            <label for="101" class="check"></label>
-          </div>
-        </div>
-        <div class="son son-2">
-          <div class="text">
-            <p>Checkbox 102</p>
-          </div>
-          <div class="switch">
-            <input type="checkbox" name="son" id="102" class="checkbox">
-            <label for="102" class="check"></label>
-          </div>
-          <div class="grandSon grandSon-1">
-            <div class="text">
-              <p>Checkbox 102.1</p>
-            </div>
-            <div class="switch">
-              <input type="checkbox" name="grandSon" id="1021" class="checkbox">
-              <label for="1021" class="check"></label>
-            </div>
-            <div class="grandGrandSon grandGrandSon-1">
-              <div class="text">
-                <p>Checkbox 102.1.1</p>
-              </div>
-              <div class="switch">
-                <input type="checkbox" name="grandGrandSon" id="10211" class="checkbox">
-                <label for="10211"></label>
-              </div>
-            </div>
-          </div>
-          <div class="grandSon grandSon-2">
-            <div class="text">
-              <p>Checkbox 102.2</p>
-            </div>
-            <div class="switch">
-              <input type="checkbox" name="grandSon" id="1022" class="checkbox">
-              <label for="1022" class="check"></label>
-            </div>
-            <div class="grandGrandSon grandGrandSon-1">
-              <div class="text">
-                <p>Checkbox 102.2.1</p>
-              </div>
-              <div class="switch">
-                <input type="checkbox" name="grandGrandSon" id="10221" class="checkbox">
-                <label for="10221" class="check"></label>
-              </div>
-            </div>
-            <div class="grandGrandSon grandGrandSon-2">
-              <div class="text">
-                <p>Checkbox 102.2.2</p>
-              </div>
-              <div class="switch">
-                <input type="checkbox" name="grandGrandSon" id="10222" class="checkbox">
-                <label for="10222" class="check"></label>
-              </div>
-            </div>
-          </div>
-          <div class="grandSon grandSon-3">
-            <div class="text">
-              <p>Checkbox 102.3</p>
-            </div>
-            <div class="switch">
-              <input type="checkbox" name="grandSon" id="1023" class="checkbox">
-              <label for="1023" class="check"></label>
-            </div>
-            <div class="grandGrandSon grandGrandSon-1">
-              <div class="text">
-                <p>Checkbox 102.3.1</p>
-              </div>
-              <div class="switch">
-                <input type="checkbox" name="grandGrandSon" id="10231" class="checkbox">
-                <label for="10231" class="check"></label>
-              </div>
-            </div>
-          </div>
-          <div class="grandSon grandSon-4">
-            <div class="text">
-              <p>Checkbox 102.4</p>
-            </div>
-            <div class="switch">
-              <input type="checkbox" name="grandSon" id="1024" class="checkbox">
-              <label for="1024" class="check"></label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="father father-2"></div>
-    </div>
+
+    <main class="main-container">
+
+      <input type="checkbox" class="father 100#0" id="100">
+      <label for="100">100</label>
+
+        <input type="checkbox" class="son 101#100" id="101">
+        <label for="101" class="son">101</label>
+
+          <input type="checkbox" class="grandSon 1011#101" id="1011">
+          <label for="1011" class="grandSon">101.1</label>
+
+      <input type="checkbox" class="father 200#0" id="200">
+      <label for="200">200</label>
+
+      <input type="checkbox" class="father 300#0" id="300">
+      <label for="300">300</label>
+
+        <input type="checkbox" class="son 301#300" id="301">
+        <label for="301" class="son">301</label>
+
+          <input type="checkbox" class="grandSon 3011#301" id="3011">
+          <label for="3011" class="grandSon">3011</label>
+
+        <input type="checkbox" class="son 302#300" id="302">
+        <label for="302" class="son">302</label>
+
+          <input type="checkbox" class="grandSon 3021#302" id="3021">
+          <label for="3021" class="grandSon">3021</label>
+
+    </main>
+
     <!--<script src="functions.js"></script>-->
-    <script src="delegacion-de-eventos.js"></script>
+    <!--<script src="delegacion-de-eventos.js"></script>-->
+    <script src="script/new-functions.js" charset="utf-8"></script>
 </body>
 
 </html>
