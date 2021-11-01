@@ -1,4 +1,4 @@
-const inputs = document.querySelectorAll('input[type="checkbox"]');
+const inputs = document.querySelectorAll('input[class*="#"]');
 const inputsPadres = document.querySelectorAll('input[class$="#0"]');
 
 document.querySelector('.main-container').addEventListener('click',(e)=>{
