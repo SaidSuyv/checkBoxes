@@ -22,11 +22,16 @@ const encenderHijos = (hijosID)=>{
   for(let inp of inputs){ // for en todos los inputs
 
     let currClass = inp.classList[(inp.classList.length - 1)]; // obtiene la clase del input actual
-    let currInput = {parentID: currClass.split('#')[1]}; // adjunta la id del input
+    let currInput = {actualID: currClass.split('#')[0], parentID: currClass.split('#')[1]}; // adjunta la id del input
 
-    if(hijosID == currInput.parentID){inp.disabled = false;} // habilita los inputs hijos actuales si es igual al parametro
+    if(hijosID == currInput.parentID){
+
+      inp.disabled = false;
+      if(inp.checked){encenderHijos(currInput.actualID);}
+      else {apagarHijos(currInput.actualID);continue;};
+
+    } // habilita los inputs hijos actuales si es igual al parametro
     else{continue;} // si no es igual, continua
-
   }
 
 };
@@ -63,5 +68,7 @@ for(let inpPadre of inputsPadres){
 
   let currInput = {actualID: currClass.split('#')[0]};
 
-  apagarHijos(currInput.actualID);
+  if(inpPadre.checked){encenderHijos(currInput.actualID);}
+  else{apagarHijos(currInput.actualID);};
+
 }
