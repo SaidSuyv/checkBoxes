@@ -2,15 +2,13 @@ label[for$="00"]{
     font-weight: bold;
 }
 
-input{
-  display: block;
-  margin: 1em 0;
+.main-container{
+  margin: auto;
+  max-width: 80%;
+  outline: 2px solid red;
+  padding: 0 2em;
 }
 
-.son{
-  margin-left: 3em;
-}
-
-.grandSon{
-  margin-left: 6em;
+.custom-control{
+  padding: 5px 0;
 }
