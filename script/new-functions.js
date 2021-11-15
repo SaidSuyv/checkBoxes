@@ -1,5 +1,5 @@
 const inputs = document.querySelectorAll('input[class*="#"]');
-const inputsPadres = document.querySelectorAll('input[class$="#0"]');
+const inputsPadres = document.querySelectorAll('input[class*="#0"]');
 
 document.querySelector('.main-container').addEventListener('click',(e)=>{
 
@@ -21,8 +21,8 @@ const encenderHijos = (hijosID)=>{
 
   for(let inp of inputs){ // for en todos los inputs
 
-    let currClass = inp.classList[(inp.classList.length - 1)]; // obtiene la clase del input actual
-    let currInput = {actualID: currClass.split('#')[0], parentID: currClass.split('#')[1]}; // adjunta la id del input
+    let currClass = inp.classList[(inp.classList.length - 1)].split('#'); // obtiene la clase del input actual
+    let currInput = {actualID: currClass[0], parentID: currClass[1]}; // adjunta la id del input
 
     if(hijosID == currInput.parentID){
 
@@ -40,12 +40,12 @@ const apagarHijos = (hijosID)=>{
 
   for(let inp of inputs){
 
-    let currClass = inp.classList[(inp.classList.length - 1)];
+    let currClass = inp.classList[(inp.classList.length - 1)].split('#');
 
     let currInput = {
 
-      actualID: currClass.split('#')[0],
-      parentID: currClass.split('#')[1]
+      actualID: currClass[0],
+      parentID: currClass[1]
 
     };
 
@@ -62,13 +62,15 @@ const apagarHijos = (hijosID)=>{
 
 };
 
-for(let inpPadre of inputsPadres){
+if(inputsPadres[0].classList[(inputsPadres[0].classList.length - 1)].split('#')[2] === 'false'){
+  for(let inpPadre of inputsPadres){
 
-  let currClass = inpPadre.classList[(inpPadre.classList.length - 1)];
+    let currClass = inpPadre.classList[(inpPadre.classList.length - 1)].split('#');
 
-  let currInput = {actualID: currClass.split('#')[0]};
+    let currInput = {actualID: currClass[0]};
 
-  if(inpPadre.checked){encenderHijos(currInput.actualID);}
-  else{apagarHijos(currInput.actualID);};
+    if(inpPadre.checked){encenderHijos(currInput.actualID);}
+    else{apagarHijos(currInput.actualID);};
 
+  }
 }
