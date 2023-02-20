@@ -62,6 +62,10 @@ const apagarHijos = (hijosID)=>{
 
 };
 
+document.onDOMContentLoaded = () => {
+  if (inputsPadres[0].classList[()])
+}
+
 if(inputsPadres[0].classList[(inputsPadres[0].classList.length - 1)].split('#')[2] === 'false'){
   for(let inpPadre of inputsPadres){
 
